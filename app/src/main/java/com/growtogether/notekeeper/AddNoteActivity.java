@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -84,18 +85,27 @@ public class AddNoteActivity extends AppCompatActivity  implements View.OnClickL
             String title = titleET.getText().toString();
             String notes = noteET.getText().toString();
             String date = setdateTV.getText().toString();
-            Note note = new Note();
-            note.setTitle(title);
-            note.setNote(notes);
-            note.setDate(date);
-            note.setUid(uniqueId);
-            if(button.getText().equals("Edit"))
-                databaseOperation.updateContact(note);
-            else
-                databaseOperation.addNote(note);
 
-            Intent intent = new Intent(AddNoteActivity.this, NoteListActivity.class);
-            startActivity(intent);
+
+            if(!title.isEmpty() && !notes.isEmpty()) {
+
+                Note note = new Note();
+                note.setTitle(title);
+                note.setNote(notes);
+                note.setDate(date);
+                note.setUid(uniqueId);
+
+
+                if (button.getText().equals("Edit"))
+                    databaseOperation.updateContact(note);
+                else
+                    databaseOperation.addNote(note);
+
+                Intent intent = new Intent(AddNoteActivity.this, NoteListActivity.class);
+                startActivity(intent);
+            }else {
+                Toast.makeText(this, "Please add all into", Toast.LENGTH_LONG).show();
+            }
         }
 
     }

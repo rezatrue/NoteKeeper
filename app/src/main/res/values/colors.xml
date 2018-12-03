@@ -3,4 +3,23 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="Darkred">#8B0000</color>
+    <color name="indiana">#CD5C5C</color>
+    <color name="Orange">#FF8C00</color>
+    <color name="lgreen">#7CFC00</color>
+    <color name="greenYello">#ADFF2F</color>
+    <color name="darkgreen">#8FBC8F</color>
+    <color name="Olive">#808000</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="cadetblue">#5F9EA0</color>
+    <color name="blue">#0000FF</color>
+    <color name="slateblue">#6A5ACD</color>
+    <color name="violet">#EE82EE</color>
+    <color name="blueviolet">#8A2BE2</color>
+    <color name="indigo">#4B0082</color>
+    <color name="sandybrown">#F4A460</color>
+    <color name="slategray">#708090</color>
+    <color name="orangered">#FF4500</color>
+    <color name="ivory">#FFFFF0</color>
+
 </resources>
